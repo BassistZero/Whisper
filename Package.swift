@@ -3,7 +3,6 @@
 import PackageDescription
 
 let name = "Whisper"
-let testName = "WhisperTests"
 
 let package = Package(
     name: name,
@@ -16,10 +15,6 @@ let package = Package(
     targets: [
         .target(
             name: name
-        ),
-        .testTarget(
-            name: testName,
-            dependencies: [Target.Dependency(stringLiteral: name)]
-        ),
+        )
     ]
 )
