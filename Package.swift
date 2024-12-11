@@ -3,6 +3,7 @@
 import PackageDescription
 
 let name = "Whisper"
+let path = "Sources"
 
 let package = Package(
     name: name,
@@ -14,7 +15,8 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: name
+            name: name,
+            path: path
         )
     ]
 )
