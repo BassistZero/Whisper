@@ -1,23 +1,25 @@
 // swift-tools-version: 5.4
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
+let name = "Whisper"
+let testName = "WhisperTests"
+
 let package = Package(
-    name: "Whisper",
+    name: name,
     products: [
         .library(
-            name: "Whisper",
-            targets: ["Whisper"]
+            name: name,
+            targets: [name]
         ),
     ],
     targets: [
         .target(
-            name: "Whisper"
+            name: name
         ),
         .testTarget(
-            name: "WhisperTests",
-            dependencies: ["Whisper"]
+            name: testName,
+            dependencies: [Target.Dependency(stringLiteral: name)]
         ),
     ]
 )
